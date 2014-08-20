@@ -32,7 +32,7 @@ shinyUI(fluidPage(
                            plotOutput('plotDegDist')
                   ),
                   tabPanel("About",
-                           h5("Help"),
+                           h5("Description"),
                            "The Logistic Map is a simple non-linear recursive relation that leads to chaotic dynamics, depending on the value of a control parameter r.",
                            "Matematically, it is defined as",
                            withMathJax("$$x_{t+1}=r x_t (1-x_t)$$ where $$x_t\\in [0,1], ~\\forall t$$"),
@@ -40,6 +40,7 @@ shinyUI(fluidPage(
                            "First, we bin the domain [0,1], such that each bin will correspond to a vertex in the graph.",
                            "Second, two vertices A and B will be connected by a directed edge if a number Xt in bin A, is mapped to a number Xt+1 in bin B, after one iteration of the Logistic Map.",
                            br(),
+                           h5("User Interface"),
                            "The side bar allows the user to change the value of the Logistic Map parameters: r (i.e. control chaotic dynamics), x0 (i.e. starting point) and the number of recursive iterations (i.e. edges).",
                            "The user can also change the number of vertices in the graph (i.e. bins), and whether duplicated edges should be kept or not.",
                            "The results are presented in the form of a graph, a set of quantitative graph metrics and also two plots depicting the degree distribution of the respective graph.",
