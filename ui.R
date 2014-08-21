@@ -10,14 +10,14 @@ shinyUI(fluidPage(
                   sliderInput("x0", withMathJax("$$x_0$$"), min=0, max=1, value = 0.1),
                   sliderInput("iterations", withMathJax("Model Iterations (i.e. edges)"), min=1000, max=10000, value = 1000),
                   h5("Graph Layout Parameters"),
-                  sliderInput("bins", "Vertices (i.e. bins)", min = 10, max = 1000, value = 500),
+                  sliderInput("bins", "Vertices (i.e. bins)", min = 10, max = 1000, value = 100),
                   checkboxInput("mult_edges", label = "Keep Duplicated Edges", value = TRUE)
     ),
     mainPanel(
       tabsetPanel(type = "tabs", 
                   tabPanel("Graph", 
                            fluidRow(
-                           column(5,
+                           column(6,
                            h5("Logistic Map Graph"),
                            plotOutput('plotGraph')
                            ),
